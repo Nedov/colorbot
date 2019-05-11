@@ -15,11 +15,11 @@ let config = require('./config.json');
 bot.on('ready', () => {
   console.log(`Запустился бот ${bot.user.username}!`);
 
-  setTimeout(() =>{
-    bot.destroy().then(() =>{
-    bot.login(process.env.BOT_TOKEN)
-    })
-    },120000)
+//   setTimeout(() =>{
+//     bot.destroy().then(() =>{
+//     bot.login(process.env.BOT_TOKEN)
+//     })
+//     },120000)
     
   
 
