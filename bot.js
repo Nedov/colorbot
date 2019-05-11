@@ -19,7 +19,7 @@ bot.on('ready', () => {
     bot.destroy().then(() =>{
     bot.login(process.env.BOT_TOKEN)
     })
-    },30000)
+    },60000)
     
   
 
