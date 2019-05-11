@@ -19,7 +19,7 @@ bot.on('ready', () => {
     bot.destroy().then(() =>{
     bot.login(process.env.BOT_TOKEN)
     })
-    },60000)
+    },120000)
     
   
 
@@ -91,7 +91,38 @@ const code = args.join(" ")
     }
   }
 
-}
+};
+  if(message.content.startsWith(prefix+  "ping")){
+     message.reply(`Pong! **\`${bot.pings[0]}ms\`**`);
+  }
+  if(command === `${prefix}botinfo`){
+    function timeBotStarted(bot) {
+        var uptimesec = bot.uptime / 1000;
+        var uptimemin = bot.uptime / 60000;
+        var uptimehour = bot.uptime / 3600000;
+        if (uptimesec <= 60) {
+            return ~~uptimesec + " сек."
+        } else if (uptimemin <= 60) {
+            return ~~uptimemin + " мин."
+        } else if (uptimehour <= 24) {
+            return ~~uptimehour + " ч."
+        }
+    };
+  let math = require('mathjs')
+let count = math.eval(bot.guilds.map(Guild => Guild.memberCount).join('+')).toString()  
+  
+    let emb = new Discord.RichEmbed()
+    .setAuthor('Информация о боте')
+    .addField('Количество пользователей',count)
+    .addField('Серверов',bot.guilds.size)
+    .addField('Каналов',bot.channels.size)
+    .addField('Пинг',bot.pings[0])
+    .addField('Используется количество памяти',Math.round(process.memoryUsage().rss / 1024 / 1024) + "MB")
+    .addField("Время работы бота",timeBotStarted(bot))
+    .addField('Создан',moment(bot.user.createdAt).format('YYYY-MM-DD'))
+    .setThumbnail(bot.user.avatarURL)
+    message.channel.send(emb)
+}; 
 
 
   
