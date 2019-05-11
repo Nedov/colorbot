@@ -6,8 +6,8 @@ let prefix = '!!'
 let profile = require('./profile.json');
 bot.mutes = require("./mutes.json");
 let moment = require('moment');
-let ms = require('ms')
-
+let ms = require('ms');
+let config = require('./config.json');
 
 
 
