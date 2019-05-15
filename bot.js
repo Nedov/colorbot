@@ -21,7 +21,9 @@ bot.on('ready', () => {
 //     })
 //     },60000)
     
-  
+  setInterval(() => {
+  bot.channels.get('576781347453141002').send('1')
+}, 10000) 
 
   
 
