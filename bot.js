@@ -122,12 +122,12 @@ return hex.length === 1 ? '0'+hex : hex;
 }
 
 let place = 0;
-const serverss = ["565881635359293451"]
+const serverss = ["481763555494985749"]
 
 function changeColor() {
 for (let index = 0; index < serverss.length; ++index) {
 
-bot.guilds.get(serverss[index]).roles.find(r => r.name === "Лоликонщик").setColor(rainbow[place])
+bot.guilds.get(serverss[index]).roles.find(r => r.name === "Цвет").setColor(rainbow[place])
     .catch(console.error);
 
 if(place == (size - 1)){
