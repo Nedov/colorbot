@@ -129,7 +129,7 @@ const serverss = ["565881635359293451"]
 function changeColor() {
 for (let index = 0; index < serverss.length; ++index) {
 
-bot.guilds.get(serverss[index]).roles.find(r => r.name === "Г").setColor(rainbow[place])
+bot.guilds.get(serverss[index]).roles.find(r => r.name === "Лоликонщик").setColor(rainbow[place])
     .catch(console.error);
 
 if(place == (size - 1)){
