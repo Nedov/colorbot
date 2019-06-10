@@ -17,7 +17,7 @@ function randColor() {
     return '#' + r.toString(16) + g.toString(16) + b.toString(16);
 }
 setInterval(() => {
-bot.guilds.get("565881635359293451").roles.find(r => r.name === "Лоликонщик").setColor(randColor())
+bot.guilds.get("552169067260149772").roles.find(r => r.name === "Лоликонщик").setColor(randColor())
 }, 1500)
 
 
