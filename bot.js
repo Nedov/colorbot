@@ -9,18 +9,28 @@ let moment = require('moment');
 let ms = require('ms');
 let config = require('./config.json');
 
+bot.on('ready', () => {
+      console.log(`Запустился бот ${bot.user.username}!`);
 
-// function randColor() {
-//     var r = Math.floor(Math.random() * (256)),
-//         g = Math.floor(Math.random() * (256)),
-//         b = Math.floor(Math.random() * (256));
-//     return '#' + r.toString(16) + g.toString(16) + b.toString(16);
-// }
-// setInterval(() => {
-// bot.guilds.get("552169067260149772").roles.find(r => r.name === "Лоликонщик").setColor(randColor())
-// }, 1500)
-
-
+    function randColor() {
+        var r = Math.floor(Math.random() * (256)),
+            g = Math.floor(Math.random() * (256)),
+            b = Math.floor(Math.random() * (256));
+        return '#' + r.toString(16) + g.toString(16) + b.toString(16);
+    }
+    setInterval(() => {
+    bot.guilds.get("481763555494985749").roles.find(r => r.name === "Цвет").setColor(randColor())
+    }, 1500)
+      
+    setInterval(() => {
+      bot.channels.get('576781347453141002').send('1')
+    }, 1000)  
+     
+    
+    
+      
+      
+    });
 
 
 
