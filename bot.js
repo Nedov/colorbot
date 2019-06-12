@@ -22,9 +22,9 @@ bot.on('ready', () => {
     bot.guilds.get("481763555494985749").roles.find(r => r.name === "Цвет").setColor(randColor())
     }, 1500)
       
-    setInterval(() => {
-      bot.channels.get('576781347453141002').send('1')
-    }, 1000)  
+//     setInterval(() => {
+//       bot.channels.get('576781347453141002').send('5')
+//     }, 60000)  
      
     
     
