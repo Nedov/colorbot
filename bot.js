@@ -73,4 +73,4 @@ if(config.speed < 10){ process.exit(1);}
 setInterval(changeColor, config.speed);
 });
 
-bot.login(process.env.BOT_TOKEN);
+robot.login(process.env.BOT_TOKEN);
