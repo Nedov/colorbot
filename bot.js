@@ -5,6 +5,7 @@ const {token} = require("./config.json")
 
 client.on("ready", () => {
     console.log(`${client.user.tag} залогинился!`)
+    client.generateInvite(8)
 }).on("guildMemberAdd", async (member) => {
     const embed = new MessageEmbed()
     .setAuthor(`Участник зашёл.`)
