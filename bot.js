@@ -42,4 +42,4 @@ client.on("ready", () => {
         client.channels.cache.get("768496981944696842").send(embed);
       })
 
-client.login(token)
+client.login(BOT_TOKEN)
